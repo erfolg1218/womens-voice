@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>一般社団法人ウーマンズヴォイス — 女性×AI×GX</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        apparelBlack: '#111111',
+                        apparelGray: '#F9F9F9',
+                        apparelBorder: '#E5E5E5',
+                        apparelPink: '#FFD8DB',      /* 理事長こだわりの薄いピンクマーカー */
+                        apparelPinkText: '#D66B74',  /* 高アクセシビリティ用テキストカラー */
+                    },
+                    fontFamily: {
+                        serif: ['Didot', 'Bodoni MT', 'Noto Serif JP', 'Shippori Mincho', 'serif'],
+                        sans: ['Inter', 'Helvetica Neue', 'Arial', 'Noto Sans JP', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        input:focus, textarea:focus, button:focus {
+            outline: 2px solid #D66B74;
+            outline-offset: 2px;
+        }
+        -webkit-tap-highlight-color: transparent;
+        html { scroll-behavior: smooth; }
+    </style>
+</head>
+<body class="bg-white text-apparelBlack font-sans antialiased selection:bg-apparelPink">
+
+    <!-- ヘッダー -->
+    <header class="border-b border-apparelBorder bg-white sticky top-0 z-50 px-4">
+        <div class="max-w-4xl mx-auto h-16 flex items-center justify-between">
+            <div class="flex flex-col">
+                <span class="text-xs font-bold tracking-widest uppercase font-serif">Woman's Voice</span>
+                <span class="text-[8px] text-gray-400 tracking-wider -mt-0.5">GX & AI INTEGRATION</span>
+            </div>
+            <span class="text-[9px] border border-apparelBlack px-2 py-0.5 uppercase tracking-widest font-medium">Concept Presentation</span>
+        </div>
+    </header>
+
+    <!-- ヒーローセクション（哲学） -->
+    <section class="py-16 px-6 max-w-2xl mx-auto text-center border-b border-apparelBorder">
+        <span class="text-[10px] uppercase tracking-widest text-gray-400 block mb-3">The Philosophy</span>
+        <h1 class="text-xl md:text-3xl font-serif font-light leading-relaxed tracking-wide mb-6 text-left md:text-center">
+            物質的豊かさから、<br class="md:hidden">
+            <span class="bg-apparelPink px-2 inline-block my-1 font-normal">情報・知性・つながり</span> の豊かさへ
+        </h1>
+        <p class="text-xs md:text-sm text-gray-600 leading-relaxed font-light text-left">
+            20世紀は「モノ」が豊かさの象徴でした。しかし今、世界は静かに転換しています。AIの登場により情報へのアクセスは民主化され、GXの潮流は地球との関係を問い直しています。すべての女性が「情報・知性・つながり」を手に入れ、新時代の豊かさを自ら創るためのプラットフォームが、ここに始まります[cite: 1, 2]。
+        </p>
+    </section>
+
+    <!-- 3つの事業概要 -->
+    <section class="py-12 px-6 max-w-2xl mx-auto border-b border-apparelBorder">
+        <div class="mb-8">
+            <span class="text-[9px] uppercase tracking-widest text-gray-400 block mb-0.5">01 / Core Pillars</span>
+            <h2 class="text-sm font-serif tracking-wider uppercase font-medium">事業を支える3つの軸</h2>
+        </div>
+        
+        <div class="space-y-4">
+            <div class="border border-apparelBorder p-5 bg-apparelGray">
+                <span class="text-[9px] text-gray-400 block mb-1">PILLAR 01 / PREMIUM</span>
+                <h3 class="text-xs font-bold tracking-wider mb-2">プレミアム女性経営者向け AI×GX戦略支援</h3>
+                <p class="text-[11px] text-gray-600 font-light leading-relaxed">
+                    少人数制の集中プログラム。生成AIを経営・マーケティングに統合する実践設計や、脱炭素・シリカ事業・ESG投資を自社戦略に組み込む個別伴走コンサルティング[cite: 1, 2]。
+                </p>
+            </div>
+
+            <div class="border border-apparelBorder p-5 bg-white">
+                <span class="text-[9px] text-gray-400 block mb-1">PILLAR 02 / RESKILLING</span>
+                <h3 class="text-xs font-bold tracking-wider mb-2">世代・経験に合わせた 女性AIリスキリング講座</h3>
+                <p class="text-[11px] text-gray-600 font-light leading-relaxed">
+                    最大の特徴は「<span class="bg-apparelPink px-1">経験棚卸し×AI</span>」アプローチ。子育てや介護、これまでのキャリアをAIスキルとして再定義し、新時代に必要とされる人材へシフトします[cite: 1, 2]。
+                </p>
+            </div>
+
+            <div class="border border-apparelBorder p-5 bg-apparelGray">
+                <span class="text-[9px] text-gray-400 block mb-1">PILLAR 03 / SILICA & GX</span>
+                <h3 class="text-xs font-bold tracking-wider mb-2">植物性シリカ×GX 普及・コミュニティ事業</h3>
+                <p class="text-[11px] text-gray-600 font-light leading-relaxed">
+                    世界随一の活性酸素処理特許技術（ポラリス分解炉）による「植物性シリカ」の社会普及。美と健康だけでなく、バイオ炭の農地還元による脱炭素（J-クレジット）を生活と経営に統合[cite: 1, 2]。
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 三層の女性ターゲット（アコーディオン） -->
+    <section class="py-12 px-6 max-w-2xl mx-auto border-b border-apparelBorder">
+        <div class="mb-6">
+            <span class="text-[9px] uppercase tracking-widest text-gray-400 block mb-0.5">02 / Target Funnel</span>
+            <h2 class="text-sm font-serif tracking-wider uppercase font-medium">連動する三層のコミュニティ</h2>
+            <p class="text-[10px] text-gray-400 mt-1 font-light">※各ステップをタップすると詳細が開きます</p>
+        </div>
+
+        <div class="space-y-3">
+            <div onclick="activateSegment('seg-p')" id="card-p" class="border border-apparelBlack p-4 bg-white transition-all">
+                <div class="flex justify-between items-center">
+                    <span class="text-xs font-bold tracking-wider">Step 1 / プレミアム経営者層</span>
+                    <span id="badge-p" class="w-1.5 h-1.5 bg-apparelPinkText rounded-full"></span>
+                </div>
+                <div id="body-p" class="mt-3 text-[11px] text-gray-600 font-light leading-relaxed space-y-1">
+                    <p><strong>■ 人物像:</strong> 会社経営者・士業・投資家・富裕層の女性[cite: 1]</p>
+                    <p><strong>■ ニーズ:</strong> AI×GXを自分のビジネスや資産運用に統合したい[cite: 1]</p>
+                    <p><strong>■ 提供価値:</strong> 少人数制プレミアムプログラム・個別戦略設計[cite: 1]</p>
+                </div>
+            </div>
+
+            <div onclick="activateSegment('seg-c')" id="card-c" class="border border-apparelBorder p-4 bg-apparelGray transition-all">
+                <div class="flex justify-between items-center">
+                    <span class="text-xs text-gray-400 font-medium tracking-wider">Step 2 / コア・アナログ層</span>
+                    <span id="badge-c" class="w-1.5 h-1.5 bg-transparent rounded-full"></span>
+                </div>
+                <div id="body-c" class="mt-3 text-[11px] text-gray-600 font-light leading-relaxed space-y-1 hidden">
+                    <p><strong>■ 人物像:</strong> 40〜60代・デジタルに不慣れ・豊富な人生経験を持つ女性[cite: 1]</p>
+                    <p><strong>■ ニーズ:</strong> 時代に乗り遅れたくない、「私には無理」という思い込みを超えたい[cite: 1]</p>
+                    <p><strong>■ 提供価値:</strong> 「経験棚卸し×AI」で、これまでの人生が一番の武器になる体験[cite: 1]</p>
+                </div>
+            </div>
+
+            <div onclick="activateSegment('seg-g')" id="card-g" class="border border-apparelBorder p-4 bg-apparelGray transition-all">
+                <div class="flex justify-between items-center">
+                    <span class="text-xs text-gray-400 font-medium tracking-wider">Step 3 / 成長・若年層</span>
+                    <span id="badge-g" class="w-1.5 h-1.5 bg-transparent rounded-full"></span>
+                </div>
+                <div id="body-g" class="mt-3 text-[11px] text-gray-600 font-light leading-relaxed space-y-1 hidden">
+                    <p><strong>■ 人物像:</strong> 20〜40代・復職、転職、副業、起業を検討中の女性[cite: 1]</p>
+                    <p><strong>■ ニーズ:</strong> 実践的なAIスキルで市場価値を上げ、GXという新市場に乗り出したい[cite: 1]</p>
+                    <p><strong>■ 提供価値:</strong> 実践적AIスキル習得 ＋ GX人材としての新キャリア開拓[cite: 1]</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- AIエージェント体験デモ -->
+    <section class="py-12 px-6 max-w-2xl mx-auto bg-white">
+        <div class="text-center mb-6">
+            <span class="text-[9px] uppercase tracking-widest text-gray-400 border border-apparelBorder px-2 py-0.5 inline-block mb-2">Interactive Preview</span>
+            <h2 class="text-sm font-serif tracking-wider uppercase font-medium">「経験棚卸し×AI」システム体験</h2>
+        </div>
+
+        <div class="border border-apparelBlack p-4 bg-white">
+            <label for="experience-input" class="block text-[11px] font-bold tracking-wider mb-2">
+                あなたのこれまでの経験（子育て・主婦業務・お仕事など）を入力：
+            </label>
+            <textarea id="experience-input" rows="3" class="w-full p-3 border border-apparelBorder text-xs font-light focus:border-apparelBlack text-gray-700 bg-apparelGray rounded-none resize-none" placeholder="例：12年間、専業主婦として子供2人を育てながら、PTAの役員として地域のイベント予算調整や外部連絡網のデジタル化を主導した。"></textarea>
+            
+            <button onclick="triggerApparelAi()" class="w-full bg-apparelBlack text-white text-xs font-bold tracking-widest uppercase py-3 mt-2 hover:bg-gray-900 transition rounded-none">
+                強みを新世代スキルに変換 &rarr;
+            </button>
+
+            <div id="apparel-ai-result" class="mt-4 pt-4 border-t border-dashed border-apparelBorder hidden">
+                <div class="flex items-center space-x-2 mb-2">
+                    <span class="inline-block text-[8px] bg-apparelPink text-apparelBlack px-1.5 py-0.5 font-bold uppercase tracking-wider">AIエージェント分析報告</span>
+                </div>
+                <div id="apparel-ai-text" class="text-[11px] text-gray-700 font-light leading-relaxed space-y-3">
+                    <!-- JSで挿入 -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- フッター -->
+    <footer class="border-t border-apparelBorder py-10 px-4 text-center bg-apparelGray">
+        <p class="text-[9px] font-serif tracking-widest text-gray-400 uppercase">&copy; 2026 General Incorporated Association Woman's Voice.</p>
+        <p class="text-[8px] text-gray-400 font-sans tracking-wide mt-1">Technical Architecture designed by Erfolg Co., Ltd.</p>
+    </footer>
+
+    <script>
+        function activateSegment(segId) {
+            const targets = {
+                'seg-p': { card: 'card-p', body: 'body-p', badge: 'badge-p' },
+                'seg-c': { card: 'card-c', body: 'body-c', badge: 'badge-c' },
+                'seg-g': { card: 'card-g', body: 'body-g', badge: 'badge-g' }
+            };
+
+            Object.keys(targets).forEach(key => {
+                const item = targets[key];
+                const cardEl = document.getElementById(item.card);
+                document.getElementById(item.body).classList.add('hidden');
+                const badgeEl = document.getElementById(item.badge);
+                badgeEl.classList.remove('bg-apparelPinkText');
+                badgeEl.classList.add('bg-transparent');
+                cardEl.classList.remove('border-apparelBlack', 'bg-white');
+                cardEl.classList.add('border-apparelBorder', 'bg-apparelGray');
+                cardEl.querySelector('span').classList.remove('text-apparelBlack', 'font-bold');
+                cardEl.querySelector('span').classList.add('text-gray-400');
+            });
+
+            const active = targets[segId];
+            const activeCard = document.getElementById(active.card);
+            document.getElementById(active.body).classList.remove('hidden');
+            const activeBadge = document.getElementById(active.badge);
+            activeBadge.classList.remove('bg-transparent');
+            activeBadge.classList.add('bg-apparelPinkText');
+            activeCard.classList.remove('border-apparelBorder', 'bg-apparelGray');
+            activeCard.classList.add('border-apparelBlack', 'bg-white');
+            activeCard.querySelector('span').classList.remove('text-gray-400');
+            activeCard.querySelector('span').classList.add('text-apparelBlack', 'font-bold');
+        }
+
+        function triggerApparelAi() {
+            const inputVal = document.getElementById('experience-input').value.trim();
+            const resultArea = document.getElementById('apparel-ai-result');
+            const textArea = document.getElementById('apparel-ai-text');
+
+            if (!inputVal) {
+                alert("これまでのご経験を入力してください。");
+                return;
+            }
+
+            resultArea.classList.remove('hidden');
+            textArea.innerHTML = "<p class='text-gray-400 italic font-light animate-pulse'>Analyzing human assets...</p>";
+
+            setTimeout(() => {
+                textArea.innerHTML = `
+                    <p class="font-medium text-apparelBlack">あなたの眠れる経験値は、AI時代において以下のデジタル資産（強み）へと再構造化されました：</p>
+                    <p class="mt-2"><span class="bg-apparelPink font-medium px-1">1. 組織オペレーション・最適化マネジメント力</span><br>限られたリソースの中でスケジュールや予算を破綻させずに運用した知恵は、企業の『プロジェクト管理』や『AI運用オペレーター』として即座に通用する高い適性を示しています。</p>
+                    <p class="mt-2"><span class="bg-apparelPink font-medium px-1">2. チェンジマネジメント（IT定着化・導入推進力）</span><br>既存のアナログ体制からLINE等のデジタル連絡網へ移行を主導したという事実は、現代の企業が最も頭を悩ませている『組織のDX・IT定着化（カスタマーサクセス）』に不可欠な突破力そのものです。</p>
+                    <p class="mt-3 text-gray-400 font-light border-l border-apparelBlack pl-3">ウーマンズヴォイスのAIリスキリングプログラムは、この価値を言語化し、自走型AIエージェントの設計者へとステップアップする道筋を完全伴走します[cite: 1, 2]。</p>
+                `;
+            }, 700);
+        }
+    </script>
+</body>
+</html>
