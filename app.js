@@ -64,8 +64,16 @@
   });
 
   /* ---------- reveal ---------- */
-  var targets = document.querySelectorAll(".reveal, .reveal-img, .flow, [data-chart]");
+  var targets = document.querySelectorAll(".reveal, .reveal-img, .flow, .ph__photo, [data-chart]");
   var reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+  /* TOP ヒーロー: 写真をゆっくり等倍に戻す (静かな導入) */
+  var topHero = document.querySelector(".top-hero");
+  if (topHero) {
+    requestAnimationFrame(function () {
+      requestAnimationFrame(function () { topHero.classList.add("is-ready"); });
+    });
+  }
 
   if (!("IntersectionObserver" in window) || reduce) {
     targets.forEach(function (el) {
