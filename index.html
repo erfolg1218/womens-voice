@@ -1,234 +1,239 @@
 <!DOCTYPE html>
-<html lang="ja">
+<html lang="ja" class="no-js">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>一般社団法人ウーマンズヴォイス — 女性×AI×GX</title>
-    <!-- Tailwind CSS CDN -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        apparelBlack: '#111111',
-                        apparelGray: '#F9F9F9',
-                        apparelBorder: '#E5E5E5',
-                        apparelPink: '#FFD8DB',      /* 理事長こだわりの薄いピンクマーカー */
-                        apparelPinkText: '#D66B74',  /* 高アクセシビリティ用テキストカラー */
-                    },
-                    fontFamily: {
-                        serif: ['Didot', 'Bodoni MT', 'Noto Serif JP', 'Shippori Mincho', 'serif'],
-                        sans: ['Inter', 'Helvetica Neue', 'Arial', 'Noto Sans JP', 'sans-serif'],
-                    }
-                }
-            }
-        }
-    </script>
-    <style>
-        input:focus, textarea:focus, button:focus {
-            outline: 2px solid #D66B74;
-            outline-offset: 2px;
-        }
-        -webkit-tap-highlight-color: transparent;
-        html { scroll-behavior: smooth; }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>一般社団法人 ウーマンズヴォイス | Women's Voice</title>
+  <meta name="description" content="一般社団法人ウーマンズヴォイス（Women's Voice）公式サイト。すべての女性の声を、力に変える。女性同士がつながり、学び、自分らしい生き方や働き方のヒントを共有するコミュニティです。">
+  <link rel="icon" type="image/png" href="assets/favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Jost:wght@300;400;500&family=Noto+Sans+JP:wght@300;400&family=Shippori+Mincho:wght@400;500;600&display=swap">
+  <link rel="stylesheet" href="styles.css">
+  <script src="app.js" defer></script>
 </head>
-<body class="bg-white text-apparelBlack font-sans antialiased selection:bg-apparelPink">
+<body>
+<a class="skip-link" href="#main">本文へスキップ</a>
 
-    <!-- ヘッダー -->
-    <header class="border-b border-apparelBorder bg-white sticky top-0 z-50 px-4">
-        <div class="max-w-4xl mx-auto h-16 flex items-center justify-between">
-            <div class="flex flex-col">
-                <span class="text-xs font-bold tracking-widest uppercase font-serif">Woman's Voice</span>
-                <span class="text-[8px] text-gray-400 tracking-wider -mt-0.5">GX & AI INTEGRATION</span>
-            </div>
-            <span class="text-[9px] border border-apparelBlack px-2 py-0.5 uppercase tracking-widest font-medium">Concept Presentation</span>
-        </div>
-    </header>
+<header class="site-header">
+  <div class="site-header__inner">
+    <a class="site-logo" href="index.html" aria-label="Women's Voice トップページへ"><img src="assets/logo-charcoal.png" alt="WOMEN'S VOICE ウーマンズヴォイス"></a>
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="global-nav" aria-label="メニューを開く"><span></span><span></span></button>
+    <nav id="global-nav" class="global-nav" aria-label="グローバルナビゲーション">
+      <ul>
+        <li><a href="index.html" aria-current="page">Top</a></li>
+        <li><a href="empower.html">Empower</a></li>
+        <li><a href="wellbeing.html">Well-being</a></li>
+        <li><a href="social.html">Social Impact</a></li>
+        <li><a href="link.html">Link</a></li>
+        <li><a href="voice.html">Voice</a></li>
+        <li><a href="information.html">Information</a></li>
+      </ul>
+      <a class="btn btn--pink" href="information.html#recruit">アンバサダー募集</a>
+    </nav>
+  </div>
+</header>
 
-    <!-- ヒーローセクション（哲学） -->
-    <section class="py-16 px-6 max-w-2xl mx-auto text-center border-b border-apparelBorder">
-        <span class="text-[10px] uppercase tracking-widest text-gray-400 block mb-3">The Philosophy</span>
-        <h1 class="text-xl md:text-3xl font-serif font-light leading-relaxed tracking-wide mb-6 text-left md:text-center">
-            物質的豊かさから、<br class="md:hidden">
-            <span class="bg-apparelPink px-2 inline-block my-1 font-normal">情報・知性・つながり</span> の豊かさへ
+<main id="main">
+
+  <!-- ===== Hero ===== -->
+  <section class="hero" aria-labelledby="hero-title">
+    <img class="hero__mark" src="assets/mark-charcoal.png" alt="" aria-hidden="true">
+    <div class="wrap hero__grid">
+      <div class="hero__copy">
+        <p class="eyebrow reveal">Women's Voice</p>
+        <h1 id="hero-title" class="hero__title reveal" data-delay="1">
+          <span>すべての女性の</span><span>声を、力に</span><span>変える。</span>
         </h1>
-        <p class="text-xs md:text-sm text-gray-600 leading-relaxed font-light text-left">
-            20世紀は「モノ」が豊かさの象徴でした。しかし今、世界は静かに転換しています。AIの登場により情報へのアクセスは民主化され、GXの潮流は地球との関係を問い直しています。すべての女性が「情報・知性・つながり」を手に入れ、新時代の豊かさを自ら創るためのプラットフォームが、ここに始まります[cite: 1, 2]。
-        </p>
-    </section>
-
-    <!-- 3つの事業概要 -->
-    <section class="py-12 px-6 max-w-2xl mx-auto border-b border-apparelBorder">
-        <div class="mb-8">
-            <span class="text-[9px] uppercase tracking-widest text-gray-400 block mb-0.5">01 / Core Pillars</span>
-            <h2 class="text-sm font-serif tracking-wider uppercase font-medium">事業を支える3つの軸</h2>
+        <p class="hero__en reveal" data-delay="2">Every woman's voice, into strength.</p>
+        <hr class="hero__rule reveal" data-delay="2">
+        <p class="hero__text reveal" data-delay="3">ウーマンズヴォイスは、すべての女性の声を力に変えて、自分らしい生き方のヒントを共有し合うネットワークです。女性たちの健康課題の解決、AIを取り入れたビジネス提案、新しいチャレンジを支えていく取り組みを続けています。</p>
+        <div class="btn-row reveal" data-delay="4">
+          <a class="btn btn--pink" href="information.html#recruit">アンバサダー募集 <span class="arrow" aria-hidden="true"></span></a>
+          <a class="btn" href="#about">私たちについて <span class="arrow" aria-hidden="true"></span></a>
         </div>
-        
-        <div class="space-y-4">
-            <div class="border border-apparelBorder p-5 bg-apparelGray">
-                <span class="text-[9px] text-gray-400 block mb-1">PILLAR 01 / PREMIUM</span>
-                <h3 class="text-xs font-bold tracking-wider mb-2">プレミアム女性経営者向け AI×GX戦略支援</h3>
-                <p class="text-[11px] text-gray-600 font-light leading-relaxed">
-                    少人数制の集中プログラム。生成AIを経営・マーケティングに統合する実践設計や、脱炭素・シリカ事業・ESG投資を自社戦略に組み込む個別伴走コンサルティング[cite: 1, 2]。
-                </p>
-            </div>
-
-            <div class="border border-apparelBorder p-5 bg-white">
-                <span class="text-[9px] text-gray-400 block mb-1">PILLAR 02 / RESKILLING</span>
-                <h3 class="text-xs font-bold tracking-wider mb-2">世代・経験に合わせた 女性AIリスキリング講座</h3>
-                <p class="text-[11px] text-gray-600 font-light leading-relaxed">
-                    最大の特徴は「<span class="bg-apparelPink px-1">経験棚卸し×AI</span>」アプローチ。子育てや介護、これまでのキャリアをAIスキルとして再定義し、新時代に必要とされる人材へシフトします[cite: 1, 2]。
-                </p>
-            </div>
-
-            <div class="border border-apparelBorder p-5 bg-apparelGray">
-                <span class="text-[9px] text-gray-400 block mb-1">PILLAR 03 / SILICA & GX</span>
-                <h3 class="text-xs font-bold tracking-wider mb-2">植物性シリカ×GX 普及・コミュニティ事業</h3>
-                <p class="text-[11px] text-gray-600 font-light leading-relaxed">
-                    世界随一の活性酸素処理特許技術（ポラリス分解炉）による「植物性シリカ」の社会普及。美と健康だけでなく、バイオ炭の農地還元による脱炭素（J-クレジット）を生活と経営に統合[cite: 1, 2]。
-                </p>
-            </div>
+      </div>
+      <figure class="hero__visual reveal" data-delay="2">
+        <div class="frame frame--outline">
+          <div class="frame__inner frame frame--color reveal-img">
+            <img src="uploads/00_daihyo_mari_color.jpg" alt="ウーマンズヴォイス 代表 山海まりのポートレート">
+          </div>
         </div>
-    </section>
+        <figcaption class="caption">Representative — 山海 まり</figcaption>
+      </figure>
+    </div>
+    <p class="scroll-cue" aria-hidden="true">Scroll <span class="scroll-cue__line"></span></p>
+  </section>
 
-    <!-- 三層の女性ターゲット（アコーディオン） -->
-    <section class="py-12 px-6 max-w-2xl mx-auto border-b border-apparelBorder">
-        <div class="mb-6">
-            <span class="text-[9px] uppercase tracking-widest text-gray-400 block mb-0.5">02 / Target Funnel</span>
-            <h2 class="text-sm font-serif tracking-wider uppercase font-medium">連動する三層のコミュニティ</h2>
-            <p class="text-[10px] text-gray-400 mt-1 font-light">※各ステップをタップすると詳細が開きます</p>
+  <!-- ===== We are ===== -->
+  <section id="about" class="section" aria-labelledby="about-title">
+    <div class="wrap split">
+      <figure class="reveal">
+        <div class="frame frame--crop ratio-portrait reveal-img">
+          <img src="uploads/00_mari_editorial.png" alt="カフェでカップを手にする代表 山海まり" loading="lazy">
         </div>
-
-        <div class="space-y-3">
-            <div onclick="activateSegment('seg-p')" id="card-p" class="border border-apparelBlack p-4 bg-white transition-all">
-                <div class="flex justify-between items-center">
-                    <span class="text-xs font-bold tracking-wider">Step 1 / プレミアム経営者層</span>
-                    <span id="badge-p" class="w-1.5 h-1.5 bg-apparelPinkText rounded-full"></span>
-                </div>
-                <div id="body-p" class="mt-3 text-[11px] text-gray-600 font-light leading-relaxed space-y-1">
-                    <p><strong>■ 人物像:</strong> 会社経営者・士業・投資家・富裕層の女性[cite: 1]</p>
-                    <p><strong>■ ニーズ:</strong> AI×GXを自分のビジネスや資産運用に統合したい[cite: 1]</p>
-                    <p><strong>■ 提供価値:</strong> 少人数制プレミアムプログラム・個別戦略設計[cite: 1]</p>
-                </div>
-            </div>
-
-            <div onclick="activateSegment('seg-c')" id="card-c" class="border border-apparelBorder p-4 bg-apparelGray transition-all">
-                <div class="flex justify-between items-center">
-                    <span class="text-xs text-gray-400 font-medium tracking-wider">Step 2 / コア・アナログ層</span>
-                    <span id="badge-c" class="w-1.5 h-1.5 bg-transparent rounded-full"></span>
-                </div>
-                <div id="body-c" class="mt-3 text-[11px] text-gray-600 font-light leading-relaxed space-y-1 hidden">
-                    <p><strong>■ 人物像:</strong> 40〜60代・デジタルに不慣れ・豊富な人生経験を持つ女性[cite: 1]</p>
-                    <p><strong>■ ニーズ:</strong> 時代に乗り遅れたくない、「私には無理」という思い込みを超えたい[cite: 1]</p>
-                    <p><strong>■ 提供価値:</strong> 「経験棚卸し×AI」で、これまでの人生が一番の武器になる体験[cite: 1]</p>
-                </div>
-            </div>
-
-            <div onclick="activateSegment('seg-g')" id="card-g" class="border border-apparelBorder p-4 bg-apparelGray transition-all">
-                <div class="flex justify-between items-center">
-                    <span class="text-xs text-gray-400 font-medium tracking-wider">Step 3 / 成長・若年層</span>
-                    <span id="badge-g" class="w-1.5 h-1.5 bg-transparent rounded-full"></span>
-                </div>
-                <div id="body-g" class="mt-3 text-[11px] text-gray-600 font-light leading-relaxed space-y-1 hidden">
-                    <p><strong>■ 人物像:</strong> 20〜40代・復職、転職、副業、起業を検討中の女性[cite: 1]</p>
-                    <p><strong>■ ニーズ:</strong> 実践的なAIスキルで市場価値を上げ、GXという新市場に乗り出したい[cite: 1]</p>
-                    <p><strong>■ 提供価値:</strong> 実践적AIスキル習得 ＋ GX人材としての新キャリア開拓[cite: 1]</p>
-                </div>
-            </div>
+        <figcaption class="caption">Editorial — Women's Voice</figcaption>
+      </figure>
+      <div class="split__body">
+        <p class="eyebrow reveal">We are</p>
+        <h2 id="about-title" class="heading reveal" data-delay="1">この場所でつながり、<br>新しい一歩を、一緒に。</h2>
+        <div class="reveal" data-delay="2">
+          <p>Women's Voice は、女性同士がつながり、学び、自分らしい生き方や働き方のヒントを共有するコミュニティです。</p>
+          <p>物質的な豊かさから、情報・知性・つながりの豊かさへ。世界が静かに転換しつつある今、すべての女性が自分の経験を力に変え、新しい時代の豊かさを自ら創っていけるよう、学びと出会いの場をひらいています。</p>
+          <p>「もう遅い」も「私なんて」も、いらない。あなたの声は、きっと誰かの力になります。</p>
         </div>
-    </section>
-
-    <!-- AIエージェント体験デモ -->
-    <section class="py-12 px-6 max-w-2xl mx-auto bg-white">
-        <div class="text-center mb-6">
-            <span class="text-[9px] uppercase tracking-widest text-gray-400 border border-apparelBorder px-2 py-0.5 inline-block mb-2">Interactive Preview</span>
-            <h2 class="text-sm font-serif tracking-wider uppercase font-medium">「経験棚卸し×AI」システム体験</h2>
+        <div class="signature reveal" data-delay="3">
+          <span class="signature__role">Representative / 代表</span>
+          <span class="signature__name">山海 まり</span>
         </div>
+        <a class="text-link reveal" data-delay="3" href="empower.html">Read our story <span class="arrow" aria-hidden="true"></span></a>
+      </div>
+    </div>
+  </section>
 
-        <div class="border border-apparelBlack p-4 bg-white">
-            <label for="experience-input" class="block text-[11px] font-bold tracking-wider mb-2">
-                あなたのこれまでの経験（子育て・主婦業務・お仕事など）を入力：
-            </label>
-            <textarea id="experience-input" rows="3" class="w-full p-3 border border-apparelBorder text-xs font-light focus:border-apparelBlack text-gray-700 bg-apparelGray rounded-none resize-none" placeholder="例：12年間、専業主婦として子供2人を育てながら、PTAの役員として地域のイベント予算調整や外部連絡網のデジタル化を主導した。"></textarea>
-            
-            <button onclick="triggerApparelAi()" class="w-full bg-apparelBlack text-white text-xs font-bold tracking-widest uppercase py-3 mt-2 hover:bg-gray-900 transition rounded-none">
-                強みを新世代スキルに変換 &rarr;
-            </button>
+  <!-- ===== Activities (事業の入口) ===== -->
+  <section class="section section--off" aria-labelledby="activities-title">
+    <div class="wrap">
+      <div class="section-head section-head--split">
+        <div>
+          <p class="eyebrow reveal">Our Activities</p>
+          <h2 id="activities-title" class="display reveal" data-delay="1">What <em>we do</em></h2>
+        </div>
+        <p class="reveal max-36" data-delay="2">健康・経済・エンターテインメントを軸に、学び、つながり、発信する。ウーマンズヴォイスの取り組みをご紹介します。</p>
+      </div>
+      <div class="entry-list">
+        <a class="entry reveal" href="empower.html">
+          <span class="entry__num">01</span>
+          <span class="entry__title"><span class="entry__en">Empower</span><span class="entry__jp">学びと挑戦を支える</span></span>
+          <p class="entry__text">AI活用やキャリアの再設計など、これまでの経験を新しい時代の力に変える学びとチャレンジの場。</p>
+          <span class="entry__go" aria-hidden="true"></span>
+        </a>
+        <a class="entry reveal" href="wellbeing.html">
+          <span class="entry__num">02</span>
+          <span class="entry__title"><span class="entry__en">Well-being</span><span class="entry__jp">心と身体の健やかさ</span></span>
+          <p class="entry__text">女性特有の健康課題について語り合い、正しい情報にふれる。提携クリニックのご紹介も行っています。</p>
+          <span class="entry__go" aria-hidden="true"></span>
+        </a>
+        <a class="entry reveal" href="social.html">
+          <span class="entry__num">03</span>
+          <span class="entry__title"><span class="entry__en">Social Impact</span><span class="entry__jp">&amp; World Voice</span></span>
+          <p class="entry__text">ひとりの声を社会へ、そして世界へ。女性の声が届く場所を、少しずつ広げていきます。</p>
+          <span class="entry__go" aria-hidden="true"></span>
+        </a>
+        <a class="entry reveal" href="link.html">
+          <span class="entry__num">04</span>
+          <span class="entry__title"><span class="entry__en">Link</span><span class="entry__jp">インタビュー・Q&amp;A</span></span>
+          <p class="entry__text">さまざまな分野で活躍する女性たちのリアルな言葉と、よくいただくご質問をまとめています。</p>
+          <span class="entry__go" aria-hidden="true"></span>
+        </a>
+        <a class="entry reveal" href="voice.html">
+          <span class="entry__num">05</span>
+          <span class="entry__title"><span class="entry__en">Voice</span><span class="entry__jp">アンバサダー紹介</span></span>
+          <p class="entry__text">ウーマンズヴォイスの想いを、自分の言葉で発信するアンバサダーをご紹介します。</p>
+          <span class="entry__go" aria-hidden="true"></span>
+        </a>
+      </div>
+    </div>
+  </section>
 
-            <div id="apparel-ai-result" class="mt-4 pt-4 border-t border-dashed border-apparelBorder hidden">
-                <div class="flex items-center space-x-2 mb-2">
-                    <span class="inline-block text-[8px] bg-apparelPink text-apparelBlack px-1.5 py-0.5 font-bold uppercase tracking-wider">AIエージェント分析報告</span>
-                </div>
-                <div id="apparel-ai-text" class="text-[11px] text-gray-700 font-light leading-relaxed space-y-3">
-                    <!-- JSで挿入 -->
-                </div>
+  <!-- ===== Statistics (仮値) ===== -->
+  <section class="section" aria-labelledby="stats-title">
+    <div class="wrap stats">
+      <div>
+        <p class="eyebrow reveal">Data</p>
+        <h2 id="stats-title" class="heading reveal" data-delay="1">数字で見る、<br>女性たちの声。</h2>
+        <p class="reveal" data-delay="2">仕事、家庭、健康。女性が向き合うテーマは、ライフステージとともに変わっていきます。私たちは、ひとりひとりの声を丁寧に集め、次の取り組みに活かしていきます。</p>
+        <p class="note reveal" data-delay="3">※ 掲載している数値はレイアウト確認用の仮の値です。調査結果の確定後に差し替えます。</p>
+      </div>
+      <div class="grid-2">
+        <div class="stat-card reveal" data-chart>
+          <p class="eyebrow">Survey 01</p>
+          <h3 class="stat-card__title">仕事と健康の両立に<br>悩んだことがある</h3>
+          <div class="donut">
+            <svg viewBox="0 0 120 120" role="img" aria-label="仕事と健康の両立に悩んだことがある：68%（仮の値）">
+              <circle class="donut__track" cx="60" cy="60" r="50"></circle>
+              <circle class="donut__value" cx="60" cy="60" r="50" data-value="68"></circle>
+            </svg>
+            <div class="donut__label" aria-hidden="true">
+              <span class="donut__num">68<small>%</small></span>
+              <span class="donut__cap">Sample</span>
             </div>
+          </div>
+          <div class="legend"><span><i></i>ある</span><span><i class="is-rest"></i>ない</span></div>
         </div>
-    </section>
+        <div class="stat-card reveal" data-delay="1" data-chart>
+          <p class="eyebrow">Survey 02</p>
+          <h3 class="stat-card__title">関心のあるテーマ<br>（複数回答）</h3>
+          <div class="bars">
+            <div class="bar">
+              <div class="bar__head"><span>健康・ウェルネス</span><span class="bar__val">72<small>%</small></span></div>
+              <div class="bar__track"><span class="bar__fill" data-value="72"></span></div>
+            </div>
+            <div class="bar">
+              <div class="bar__head"><span>キャリア・働き方</span><span class="bar__val">64<small>%</small></span></div>
+              <div class="bar__track"><span class="bar__fill" data-value="64"></span></div>
+            </div>
+            <div class="bar">
+              <div class="bar__head"><span>女性同士のつながり</span><span class="bar__val">57<small>%</small></span></div>
+              <div class="bar__track"><span class="bar__fill" data-value="57"></span></div>
+            </div>
+            <div class="bar">
+              <div class="bar__head"><span>AI・デジタル活用</span><span class="bar__val">48<small>%</small></span></div>
+              <div class="bar__track"><span class="bar__fill" data-value="48"></span></div>
+            </div>
+          </div>
+          <p class="note stat-note">Sample data — 仮の値</p>
+        </div>
+      </div>
+    </div>
+  </section>
 
-    <!-- フッター -->
-    <footer class="border-t border-apparelBorder py-10 px-4 text-center bg-apparelGray">
-        <p class="text-[9px] font-serif tracking-widest text-gray-400 uppercase">&copy; 2026 General Incorporated Association Woman's Voice.</p>
-        <p class="text-[8px] text-gray-400 font-sans tracking-wide mt-1">Technical Architecture designed by Erfolg Co., Ltd.</p>
-    </footer>
+  <!-- ===== Ambassador ===== -->
+  <section class="band" aria-labelledby="amb-title">
+    <div class="band__bg" aria-hidden="true"><img src="uploads/01_group_women.jpg" alt="" loading="lazy"></div>
+    <div class="wrap band__inner">
+      <p class="eyebrow reveal">Ambassador</p>
+      <h2 id="amb-title" class="heading reveal" data-delay="1">あなたの声を、<br>次の誰かの力に。</h2>
+      <p class="reveal" data-delay="2">あなたのホンネと、リアルな声を聴かせてください。Women's Voice のアンバサダーとして、発信し、つながり、新しいキャリアの一歩を踏み出しませんか。</p>
+      <div class="btn-row reveal" data-delay="3">
+        <a class="btn btn--pink" href="information.html#recruit">アンバサダー募集 <span class="arrow" aria-hidden="true"></span></a>
+        <a class="btn btn--light" href="voice.html">アンバサダー紹介 <span class="arrow" aria-hidden="true"></span></a>
+      </div>
+    </div>
+  </section>
 
-    <script>
-        function activateSegment(segId) {
-            const targets = {
-                'seg-p': { card: 'card-p', body: 'body-p', badge: 'badge-p' },
-                'seg-c': { card: 'card-c', body: 'body-c', badge: 'badge-c' },
-                'seg-g': { card: 'card-g', body: 'body-g', badge: 'badge-g' }
-            };
+</main>
 
-            Object.keys(targets).forEach(key => {
-                const item = targets[key];
-                const cardEl = document.getElementById(item.card);
-                document.getElementById(item.body).classList.add('hidden');
-                const badgeEl = document.getElementById(item.badge);
-                badgeEl.classList.remove('bg-apparelPinkText');
-                badgeEl.classList.add('bg-transparent');
-                cardEl.classList.remove('border-apparelBlack', 'bg-white');
-                cardEl.classList.add('border-apparelBorder', 'bg-apparelGray');
-                cardEl.querySelector('span').classList.remove('text-apparelBlack', 'font-bold');
-                cardEl.querySelector('span').classList.add('text-gray-400');
-            });
-
-            const active = targets[segId];
-            const activeCard = document.getElementById(active.card);
-            document.getElementById(active.body).classList.remove('hidden');
-            const activeBadge = document.getElementById(active.badge);
-            activeBadge.classList.remove('bg-transparent');
-            activeBadge.classList.add('bg-apparelPinkText');
-            activeCard.classList.remove('border-apparelBorder', 'bg-apparelGray');
-            activeCard.classList.add('border-apparelBlack', 'bg-white');
-            activeCard.querySelector('span').classList.remove('text-gray-400');
-            activeCard.querySelector('span').classList.add('text-apparelBlack', 'font-bold');
-        }
-
-        function triggerApparelAi() {
-            const inputVal = document.getElementById('experience-input').value.trim();
-            const resultArea = document.getElementById('apparel-ai-result');
-            const textArea = document.getElementById('apparel-ai-text');
-
-            if (!inputVal) {
-                alert("これまでのご経験を入力してください。");
-                return;
-            }
-
-            resultArea.classList.remove('hidden');
-            textArea.innerHTML = "<p class='text-gray-400 italic font-light animate-pulse'>Analyzing human assets...</p>";
-
-            setTimeout(() => {
-                textArea.innerHTML = `
-                    <p class="font-medium text-apparelBlack">あなたの眠れる経験値は、AI時代において以下のデジタル資産（強み）へと再構造化されました：</p>
-                    <p class="mt-2"><span class="bg-apparelPink font-medium px-1">1. 組織オペレーション・最適化マネジメント力</span><br>限られたリソースの中でスケジュールや予算を破綻させずに運用した知恵は、企業の『プロジェクト管理』や『AI運用オペレーター』として即座に通用する高い適性を示しています。</p>
-                    <p class="mt-2"><span class="bg-apparelPink font-medium px-1">2. チェンジマネジメント（IT定着化・導入推進力）</span><br>既存のアナログ体制からLINE等のデジタル連絡網へ移行を主導したという事実は、現代の企業が最も頭を悩ませている『組織のDX・IT定着化（カスタマーサクセス）』に不可欠な突破力そのものです。</p>
-                    <p class="mt-3 text-gray-400 font-light border-l border-apparelBlack pl-3">ウーマンズヴォイスのAIリスキリングプログラムは、この価値を言語化し、自走型AIエージェントの設計者へとステップアップする道筋を完全伴走します[cite: 1, 2]。</p>
-                `;
-            }, 700);
-        }
-    </script>
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="site-footer__grid">
+      <div>
+        <a class="site-footer__logo" href="index.html" aria-label="Women's Voice トップページへ"><img src="assets/logo-white.png" alt="WOMEN'S VOICE ウーマンズヴォイス"></a>
+        <p class="site-footer__org"><small>General Incorporated Association</small>一般社団法人 ウーマンズヴォイス</p>
+      </div>
+      <nav aria-label="フッターナビゲーション">
+        <h2>Menu</h2>
+        <ul>
+          <li><a href="index.html">Top</a></li>
+          <li><a href="empower.html">Empower</a></li>
+          <li><a href="wellbeing.html">Well-being</a></li>
+          <li><a href="social.html">Social Impact</a></li>
+          <li><a href="link.html">Link</a></li>
+          <li><a href="voice.html">Voice</a></li>
+          <li><a href="information.html">Information</a></li>
+        </ul>
+      </nav>
+      <div>
+        <h2>Contact</h2>
+        <p>お問い合わせ・アンバサダーへのご応募は、Instagram のダイレクトメッセージよりご連絡ください（オンラインフォームは準備中です）。</p>
+        <a class="text-link" href="information.html#contact">Your Voice <span class="arrow" aria-hidden="true"></span></a>
+      </div>
+    </div>
+    <div class="site-footer__bottom">
+      <small>&copy; <span data-year>2026</span> Women's Voice</small>
+      <small>All rights reserved.</small>
+    </div>
+  </div>
+</footer>
 </body>
 </html>
